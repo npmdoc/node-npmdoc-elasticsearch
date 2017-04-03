@@ -1,11 +1,13 @@
-# api documentation for  [elasticsearch (v12.1.3)](http://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/index.html)  [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-elasticsearch.svg)](https://travis-ci.org/npmdoc/node-npmdoc-elasticsearch)
+# api documentation for  [elasticsearch (v12.1.3)](http://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/index.html)  [![npm package](https://img.shields.io/npm/v/npmdoc-elasticsearch.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-elasticsearch) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-elasticsearch.svg)](https://travis-ci.org/npmdoc/node-npmdoc-elasticsearch)
 #### The official low-level Elasticsearch client for Node.js and the browser.
 
 [![NPM](https://nodei.co/npm/elasticsearch.png?downloads=true)](https://www.npmjs.com/package/elasticsearch)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-elasticsearch/build/screen-capture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-elasticsearch_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-elasticsearch/build..beta..travis-ci.org/apidoc.html)
+[![apidoc](https://npmdoc.github.io/node-npmdoc-elasticsearch/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-elasticsearch_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-elasticsearch/build..beta..travis-ci.org/apidoc.html)
 
-![package-listing](https://npmdoc.github.io/node-npmdoc-elasticsearch/build/screen-capture.npmPackageListing.svg)
+![npmPackageListing](https://npmdoc.github.io/node-npmdoc-elasticsearch/build/screenCapture.npmPackageListing.svg)
+
+![npmPackageDependencyTree](https://npmdoc.github.io/node-npmdoc-elasticsearch/build/screenCapture.npmPackageDependencyTree.svg)
 
 
 
@@ -223,6 +225,7 @@
 1.  object <span class="apidocSignatureSpan">elasticsearch.</span>Transport.serializers.angular.prototype
 1.  object <span class="apidocSignatureSpan">elasticsearch.</span>Transport.serializers.json.prototype
 1.  object <span class="apidocSignatureSpan">elasticsearch.</span>errors
+1.  object <span class="apidocSignatureSpan">elasticsearch.</span>js
 
 #### [module elasticsearch.ConnectionPool](#apidoc.module.elasticsearch.ConnectionPool)
 1.  [function <span class="apidocSignatureSpan">elasticsearch.</span>ConnectionPool (config)](#apidoc.element.elasticsearch.ConnectionPool.ConnectionPool)
@@ -580,6 +583,11 @@
 #### [module elasticsearch.errors._Abstract](#apidoc.module.elasticsearch.errors._Abstract)
 1.  [function <span class="apidocSignatureSpan">elasticsearch.errors.</span>_Abstract (msg, constructor, metadata)](#apidoc.element.elasticsearch.errors._Abstract._Abstract)
 1.  [function <span class="apidocSignatureSpan">elasticsearch.errors._Abstract.</span>super_ ()](#apidoc.element.elasticsearch.errors._Abstract.super_)
+
+#### [module elasticsearch.js](#apidoc.module.elasticsearch.js)
+1.  [function <span class="apidocSignatureSpan">elasticsearch.js.</span>ignoreLoader (ignores)](#apidoc.element.elasticsearch.js.ignoreLoader)
+1.  [function <span class="apidocSignatureSpan">elasticsearch.js.</span>jsLoader ()](#apidoc.element.elasticsearch.js.jsLoader)
+1.  [function <span class="apidocSignatureSpan">elasticsearch.js.</span>rel ()](#apidoc.element.elasticsearch.js.rel)
 
 
 
@@ -12481,6 +12489,53 @@ n/a
 - description and source-code
 ```javascript
 function Error() { [native code] }
+```
+- example usage
+```shell
+n/a
+```
+
+
+
+# <a name="apidoc.module.elasticsearch.js"></a>[module elasticsearch.js](#apidoc.module.elasticsearch.js)
+
+#### <a name="apidoc.element.elasticsearch.js.ignoreLoader"></a>[function <span class="apidocSignatureSpan">elasticsearch.js.</span>ignoreLoader (ignores)](#apidoc.element.elasticsearch.js.ignoreLoader)
+- description and source-code
+```javascript
+function ignoreLoader(ignores) {
+  return {
+    loader: 'null-loader',
+    test(path) {
+      return ignores.some(ignore => path.includes(ignore))
+    },
+  }
+}
+```
+- example usage
+```shell
+n/a
+```
+
+#### <a name="apidoc.element.elasticsearch.js.jsLoader"></a>[function <span class="apidocSignatureSpan">elasticsearch.js.</span>jsLoader ()](#apidoc.element.elasticsearch.js.jsLoader)
+- description and source-code
+```javascript
+function jsLoader() {
+  return {
+    loader: 'babel-loader',
+    test: /\.js$/,
+    include: rel('src'),
+  }
+}
+```
+- example usage
+```shell
+n/a
+```
+
+#### <a name="apidoc.element.elasticsearch.js.rel"></a>[function <span class="apidocSignatureSpan">elasticsearch.js.</span>rel ()](#apidoc.element.elasticsearch.js.rel)
+- description and source-code
+```javascript
+rel = function () { [native code] }
 ```
 - example usage
 ```shell
