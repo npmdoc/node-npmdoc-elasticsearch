@@ -592,6 +592,12 @@
 
         </li>
 
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">elasticsearch.</span>js</span>
+
+        </li>
+
     </ol></li>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.elasticsearch.ConnectionPool">module elasticsearch.ConnectionPool</a><ol>
@@ -2908,6 +2914,37 @@
 
             <a class="apidocElementLiA" href="#apidoc.element.elasticsearch.errors._Abstract.super_">
             function <span class="apidocSignatureSpan">elasticsearch.errors._Abstract.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.elasticsearch.js">module elasticsearch.js</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticsearch.js.ignoreLoader">
+            function <span class="apidocSignatureSpan">elasticsearch.js.</span>ignoreLoader
+            <span class="apidocSignatureSpan">(ignores)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticsearch.js.jsLoader">
+            function <span class="apidocSignatureSpan">elasticsearch.js.</span>jsLoader
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.elasticsearch.js.rel">
+            function <span class="apidocSignatureSpan">elasticsearch.js.</span>rel
             <span class="apidocSignatureSpan">()</span>
             </a>
 
@@ -5416,6 +5453,8 @@ Send a HEAD request to `/` and allow up to 1 second for it to complete.
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
+
+
 
 
 
@@ -15748,6 +15787,63 @@ Send a HEAD request to `/` and allow up to 1 second for it to complete.
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function Error() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.elasticsearch.js" id="apidoc.module.elasticsearch.js">module elasticsearch.js</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.elasticsearch.js.ignoreLoader" id="apidoc.element.elasticsearch.js.ignoreLoader">
+        function <span class="apidocSignatureSpan">elasticsearch.js.</span>ignoreLoader
+        <span class="apidocSignatureSpan">(ignores)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ignoreLoader(ignores) {
+  return {
+    loader: &#x27;null-loader&#x27;,
+    test(path) {
+      return ignores.some(ignore =&#x3e; path.includes(ignore))
+    },
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticsearch.js.jsLoader" id="apidoc.element.elasticsearch.js.jsLoader">
+        function <span class="apidocSignatureSpan">elasticsearch.js.</span>jsLoader
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function jsLoader() {
+  return {
+    loader: &#x27;babel-loader&#x27;,
+    test: /\.js$/,
+    include: rel(&#x27;src&#x27;),
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.elasticsearch.js.rel" id="apidoc.element.elasticsearch.js.rel">
+        function <span class="apidocSignatureSpan">elasticsearch.js.</span>rel
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rel = function () { [native code] }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
